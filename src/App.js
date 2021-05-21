@@ -4,35 +4,39 @@ import SpaceX from "./components/SpaceX";
 import Rocket from "./components/Rocket";
 import Modal from "./components/Modal";
 import "./scss/main.scss";
+import { getData } from './api-service'
 
 function App() {
 
-  const [endpoint, setEndpoint] = useState("");
-  const [spacexApi, setSpacexApi] = useState([]);
+  const [category, setCategory] = useState("");
+  const [data, setData] = useState([])
+  // const [spacexApi, setSpacexApi] = useState([]);
   const [loading, setLoading] = useState(false);
  
 
   useEffect(()=> {
-    if (endpoint !== "") {
-      const API = "https://api.spacexdata.com/v4/";
-
+    if (category) {
       setLoading(true);
 
-      fetch(`${API}${endpoint[0]}`)
-        .then(res => res.json())
-        .then(data => {setSpacexApi(data)})
-        .catch(error => console.log(error))
+    
       
-        setLoading(false);
+      getData(category).then(
+        res => {
+          setData(res);
+          setLoading(false);
+        }
+      )
+      
+
     }
-  }, [endpoint])
+  }, [category])
 
   return (
     <div className="body">
       <BodyOrnaments />
-      <SpaceX setEndpoint={setEndpoint} />
+      <SpaceX setCategory={setCategory} />
       <Rocket />
-      <Modal setEndpoint={setEndpoint} endpoint={endpoint} spacexApi={spacexApi} setSpacexApi={setSpacexApi} />
+      <Modal setCategory={setCategory} category={category} data={data} setData={setData} />
     </div>
   );
 }
