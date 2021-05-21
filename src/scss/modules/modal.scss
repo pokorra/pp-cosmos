@@ -1,0 +1,42 @@
+.modal {
+    position: absolute;
+    width: 540px;
+    height: 360px;
+    transform: translate(50%, 50%);
+    bottom: 50%;
+    right: 50%;
+    z-index: 6;
+
+    background-color: #2B224A;
+    border-radius: 16px;
+    padding: 24px;
+}
+.modal__manage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid green;
+}
+.modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: #ffffff;
+}
+.modal__cta {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    background-image: url(../../assets/ClosingIcon.png);
+}
+
+.modal__table {
+    border: 1px solid red;
+    // height: 100%;
+    width: 100%;
+    // overflow: auto;
+    overflow-y: scroll;
+    max-height: 280px;
+}

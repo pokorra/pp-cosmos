@@ -1,0 +1,28 @@
+
+
+.table__half {
+    border: 1px solid pink;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #D2CBE9;
+}
+
+.table__half--sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.table__sort {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-image: url(../../assets/SortingIcon.png);
+    background-size: contain;
+}
+

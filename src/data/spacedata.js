@@ -6,19 +6,27 @@ import Image4 from "../assets/Image4.png";
 const DATA_TILES = [
     {
         img: Image1,
-        name: "capsules"
+        name: "capsules",
+        valueI: "type",
+        valueII: "status"
     },
     {
         img: Image2,
-        name: "crew"
+        name: "crew",
+        valueI: "name",
+        valueII: "agency"
     },
     {
         img: Image3,
-        name: "rockets"
+        name: "rockets",
+        valueI: "name",
+        valueII: "first_flight"
     },
     {
         img: Image4,
-        name: "starlink"
+        name: "starlink",
+        valueI: "version",
+        valueII: "id"
     }
 ];
 
