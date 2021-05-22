@@ -1,69 +1,72 @@
 .tile__container {
-    margin-left: 15px;
-    height: 448px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    list-style-type: none;
+  margin-left: 15px;
+  height: 448px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  list-style-type: none;
 }
 .tile__single {
-    position: relative;
-    width: 160px;
-    height: 208px;
-    border-radius: 16px;
-    background-size: contain;
-    cursor: pointer;
+  position: relative;
+  width: 160px;
+  height: 208px;
+  border-radius: 16px;
+  background-size: contain;
+  cursor: pointer;
 }
 .tile__single::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(360deg, #2B224A 0%, rgba(43, 34, 74, 0) 100%);
-    border-radius: 16px;
-    z-index: 2;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(360deg, #2b224a 0%, rgba(43, 34, 74, 0) 100%);
+  border-radius: 16px;
+  z-index: 2;
 }
 .tile__single::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(0deg, rgba(43, 34, 74, 0.92) 7.69%, rgba(70, 58, 113, 0.92) 100%);
-    backdrop-filter: blur(4px);
-    border-radius: 16px;
-    opacity: 0;
-    transition: linear .6s;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(43, 34, 74, 0.92) 7.69%,
+    rgba(70, 58, 113, 0.92) 100%
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  opacity: 0;
+  transition: linear 0.6s;
 }
 .tile__background {
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  position: relative;
 }
 
 .tile__name {
-    position: absolute;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    bottom: 24px;
-    width: 100%;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: .5px;
-    z-index: 5;
-    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
-    
+  position: absolute;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  bottom: $size*2;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
 }
 
 .tile__single:hover .tile__name {
-    bottom: 94px;
+  bottom: 94px;
 }
 .tile__single:hover::after {
-    opacity: 1;
+  opacity: 1;
 }

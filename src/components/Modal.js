@@ -13,10 +13,8 @@ const Modal = ({ setCategory, category, data, setData, loading }) => {
     dataToDisplay.find((el) => el.categoryName === category)?.fieldsToDisplay ||
     [];
 
-    const [columnNumber, setColumnNumber] = useState(null);
+  const [columnNumber, setColumnNumber] = useState(null);
   const [isSortingAscending, setIsSortingAscending] = useState(null);
-
-
 
   const sortedData =
     isSortingAscending === null
@@ -31,10 +29,11 @@ const Modal = ({ setCategory, category, data, setData, loading }) => {
     setCategory("");
     setData([]);
   };
-  const onSort = (isIt, column) => {
-      setIsSortingAscending(isIt);
-      setColumnNumber(column)
+  function onSort(isIt, column) {
+    setIsSortingAscending(isIt);
+    setColumnNumber(column);
   }
+
   return (
     <div className={`modal ${category ? "" : "hidden"}`}>
       {loading ? (
@@ -52,30 +51,22 @@ const Modal = ({ setCategory, category, data, setData, loading }) => {
                   <p>{columnOne} </p>
                   <button
                     className="table__sort table__sort--az"
-                    onClick={() => onSort(true, 1)}
-                  >
-                    {" "}
+                    onClick={() => onSort(true, 1)}>
                   </button>
                   <button
                     className="table__sort table__sort--za"
-                    onClick={() => onSort(false, 1)}
-                  >
-                    {" "}
+                    onClick={() => onSort(false, 1)}>
                   </button>
                 </th>
                 <th className="table__half  table__half--sort">
-                    <p>{columnTwo} </p>
-                    <button
+                  <p>{columnTwo} </p>
+                  <button
                     className="table__sort table__sort--az"
-                    onClick={() => onSort(true, 2)}
-                  >
-                    {" "}
+                    onClick={() => onSort(true, 2)}>
                   </button>
                   <button
                     className="table__sort table__sort--za"
-                    onClick={() => onSort(false, 2)}
-                  >
-                    {" "}
+                    onClick={() => onSort(false, 2)}>
                   </button>
                 </th>
               </tr>

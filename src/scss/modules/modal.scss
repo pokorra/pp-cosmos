@@ -9,7 +9,7 @@
 
     background-color: #2B224A;
     border-radius: 16px;
-    padding: 24px;
+    padding: $size*2;
 }
 .modal__manage {
     display: flex;
@@ -23,7 +23,7 @@
     color: #ffffff;
     text-transform: capitalize;
     letter-spacing: .5px;
-    padding: 12px;
+    padding: $size;
 }
 .modal__cta {
     width: 14px;
