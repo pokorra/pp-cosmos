@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import BodyOrnaments from "./components/BodyOrnaments";
+import BodyTwinkles from "./components/BodyTwinkles";
 import SpaceX from "./components/SpaceX";
 import Rocket from "./components/Rocket";
 import Modal from "./components/Modal";
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="body">
       <BodyOrnaments />
+      <BodyTwinkles />
       <section className="body__inner-elements">
         <SpaceX setCategory={setCategory} />
         <Rocket />

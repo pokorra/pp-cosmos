@@ -37,3 +37,43 @@
     border-radius: 50%;
     background: #221b3a;
 }
+
+.body__twinkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: twinkle 3s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+.body__twinkle--a {
+    background-color: #E34A67;
+    top: 144px;
+    left: 81px;
+} 
+.body__twinkle--b {
+    background-color: #7860D7;
+    bottom: 108px;
+    left: 660px;
+    animation-delay: .8s;
+} 
+.body__twinkle--c {
+    background-color: #00C9B7;
+    top: 84px;
+    right: 557px;
+    animation-delay: 1.2s;
+} 
+.body__twinkle--d {
+    background-color: #E34A67 ;
+    bottom: 208px;
+    right: 173px;
+    animation-delay: 2s;
+} 
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
