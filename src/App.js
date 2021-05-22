@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import Logo from "./components/Logo";
 import BodyOrnaments from "./components/BodyOrnaments";
 import BodyTwinkles from "./components/BodyTwinkles";
-import SpaceX from "./components/SpaceX";
+import Tiles from "./components/Tiles";
 import Rocket from "./components/Rocket";
 import Modal from "./components/Modal";
 import { getData } from './api-service'
@@ -32,8 +33,9 @@ function App() {
     <div className="body">
       <BodyOrnaments />
       <BodyTwinkles />
+      <Logo/>
       <section className="body__inner-elements">
-        <SpaceX setCategory={setCategory} />
+        <Tiles setCategory={setCategory} category={category}/>
         <Rocket />
       </section>
       <Modal setCategory={setCategory} category={category} data={data} setData={setData} loading={loading} />

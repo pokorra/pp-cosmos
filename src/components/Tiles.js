@@ -2,14 +2,14 @@ import React from 'react';
 import Tile from './Tile';
 import DATA_TILES from '../data/spacedata';
 
-const SpaceX = ( {setCategory }) => {
+const Tiles = ( {setCategory , category}) => {
 
    
-    const changeCategory = newCategory => { setCategory(newCategory) }
+    const changeCategory = newCategory => { if (!category) {setCategory(newCategory)} }
 
     return (       
             <ul className="tile__container">
-                {DATA_TILES.map( ({img, name, valueI, valueII}) => 
+                {DATA_TILES.map( ({img, name}) => 
                 <li className="tile__single" key={name} onClick={()=> {changeCategory( name) }}> 
                     <Tile img={img} name={name}/>
                 </li>)}
@@ -17,4 +17,4 @@ const SpaceX = ( {setCategory }) => {
     )
 };
 
-export default SpaceX;
+export default Tiles;

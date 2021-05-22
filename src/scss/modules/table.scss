@@ -39,14 +39,22 @@ table {
 .table__sort {
     opacity: 0;
     position: absolute;
-    right: 20px;
+    
     width: 16px;
     height: 16px;
     background-color: transparent;
     border: none;
-    cursor: pointer;
-    background-image: url(../../assets/SortingIcon.png);
+    cursor: pointer; 
     background-size: contain;
+    background-repeat: no-repeat;
+}
+.table__sort--az {
+    background-image: url(../../assets/IconDown.png);
+    right: 40px;
+}
+.table__sort--za {
+    background-image: url(../../assets/IconUp.png);
+    right: 15px;
 }
 .table__first-row:hover .table__sort {
     opacity: 1;

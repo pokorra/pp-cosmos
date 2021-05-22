@@ -5,6 +5,16 @@
     overflow: hidden;
     @include centerflex;  
 }
+.body__logo {
+    position: absolute;
+    top: 36px;
+    left: 165px;
+    width: 116px;
+    height: 24px;
+    background-image: url(../../assets/Logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .body__inner-elements {
     width: 945px;
     display: flex;
