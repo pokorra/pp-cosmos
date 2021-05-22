@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pp-cosmos/static/css/main.0afa8dd7.chunk.css",
+    "main.js": "/pp-cosmos/static/js/main.d3021fbe.chunk.js",
+    "main.js.map": "/pp-cosmos/static/js/main.d3021fbe.chunk.js.map",
+    "runtime-main.js": "/pp-cosmos/static/js/runtime-main.8f9aa6ed.js",
+    "runtime-main.js.map": "/pp-cosmos/static/js/runtime-main.8f9aa6ed.js.map",
+    "static/js/2.f7159f8e.chunk.js": "/pp-cosmos/static/js/2.f7159f8e.chunk.js",
+    "static/js/2.f7159f8e.chunk.js.map": "/pp-cosmos/static/js/2.f7159f8e.chunk.js.map",
+    "index.html": "/pp-cosmos/index.html",
+    "static/css/main.0afa8dd7.chunk.css.map": "/pp-cosmos/static/css/main.0afa8dd7.chunk.css.map",
+    "static/js/2.f7159f8e.chunk.js.LICENSE.txt": "/pp-cosmos/static/js/2.f7159f8e.chunk.js.LICENSE.txt",
+    "static/media/Image1.c3ed6e78.png": "/pp-cosmos/static/media/Image1.c3ed6e78.png",
+    "static/media/Image2.b8d30492.png": "/pp-cosmos/static/media/Image2.b8d30492.png",
+    "static/media/Image3.9fc0d1a3.png": "/pp-cosmos/static/media/Image3.9fc0d1a3.png",
+    "static/media/Image4.2ef3f2ee.png": "/pp-cosmos/static/media/Image4.2ef3f2ee.png",
+    "static/media/main.scss": "/pp-cosmos/static/media/Planet.372d5785.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f9aa6ed.js",
+    "static/js/2.f7159f8e.chunk.js",
+    "static/css/main.0afa8dd7.chunk.css",
+    "static/js/main.d3021fbe.chunk.js"
+  ]
+}
