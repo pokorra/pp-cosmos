@@ -3,14 +3,13 @@ import BodyOrnaments from "./components/BodyOrnaments";
 import SpaceX from "./components/SpaceX";
 import Rocket from "./components/Rocket";
 import Modal from "./components/Modal";
-import "./scss/main.scss";
 import { getData } from './api-service'
+import "./scss/main.scss";
 
 function App() {
 
   const [category, setCategory] = useState("");
   const [data, setData] = useState([])
-  // const [spacexApi, setSpacexApi] = useState([]);
   const [loading, setLoading] = useState(false);
  
 
@@ -18,15 +17,12 @@ function App() {
     if (category) {
       setLoading(true);
 
-    
-      
       getData(category).then(
         res => {
           setData(res);
           setLoading(false);
         }
       )
-      
 
     }
   }, [category])
@@ -36,7 +32,7 @@ function App() {
       <BodyOrnaments />
       <SpaceX setCategory={setCategory} />
       <Rocket />
-      <Modal setCategory={setCategory} category={category} data={data} setData={setData} />
+      <Modal setCategory={setCategory} category={category} data={data} setData={setData} loading={loading} />
     </div>
   );
 }

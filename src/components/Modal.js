@@ -1,33 +1,14 @@
 import React, { useState } from 'react';
+import dataToDisplay from '../data/dataToDisplay';
 
-const dataToDisplay = [
-    {
-        categoryName: 'rockets',
-        fieldsToDisplay: ['name', 'first_flight']
-    },
-    {
-        categoryName: 'capsules',
-        fieldsToDisplay: ['type', 'status']
-    },
-    {
-        categoryName: 'crew',
-        fieldsToDisplay: ['name', 'agency']
-    },
-    {
-        categoryName: 'starlink',
-        fieldsToDisplay: ['version', 'id']
-    }
-]
 
 const getSortedData = (data = [], isAsc, fieldToCompare) => data.sort((elemA, elemB) => elemA[fieldToCompare].localeCompare(elemB[fieldToCompare]) * (isAsc ? 1 : -1))
 
-const Modal = ({ setCategory, category, data, setData }) => {
+const Modal = ({ setCategory, category, data, setData, loading}) => {
    const [isSortingAscending, setIsSortingAscending] = useState(true)
    const [columnOne, columnTwo] = dataToDisplay.find(el => el.categoryName === category)?.fieldsToDisplay || []
 
     const sortedData = (data && category) ? getSortedData(data, isSortingAscending, columnOne) : []
-
-
 
     const closeModal = () => {
         setCategory("")
@@ -38,6 +19,10 @@ const Modal = ({ setCategory, category, data, setData }) => {
     
     return (
         <div className={`modal ${category !== "" ? "" : "hidden"}`}>
+            { loading ? 
+            <div className="loader"></div> 
+            :
+            <React.Fragment> 
             <div className="modal__manage">
                 <h2 className="modal__title">{category}</h2>
                 <button className="modal__cta" onClick={closeModal}></button>
@@ -61,8 +46,9 @@ const Modal = ({ setCategory, category, data, setData }) => {
                     ))}
                 </tbody>
             </table>
-           
-          
+            </React.Fragment>
+            }
+            
         </div>
     )
 }
