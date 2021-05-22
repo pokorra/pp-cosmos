@@ -1,20 +1,29 @@
-import React from 'react';
-import Tile from './Tile';
-import DATA_TILES from '../data/spacedata';
+import React from "react";
+import Tile from "./Tile";
+import dataToDisplay from "../data/dataToDisplay";
 
-const Tiles = ( {setCategory , category}) => {
+const Tiles = ({ setCategory, category }) => {
+  const changeCategory = (newCategory) => {
+    if (!category) {
+      setCategory(newCategory);
+    }
+  };
 
-   
-    const changeCategory = newCategory => { if (!category) {setCategory(newCategory)} }
-
-    return (       
-            <ul className="tile__container">
-                {DATA_TILES.map( ({img, name}) => 
-                <li className="tile__single" key={name} onClick={()=> {changeCategory( name) }}> 
-                    <Tile img={img} name={name}/>
-                </li>)}
-            </ul>
-    )
+  return (
+    <ul className="tile__container">
+      {dataToDisplay.map(({ img, categoryName }) => (
+        <li
+          className="tile__single"
+          key={categoryName}
+          onClick={() => {
+            changeCategory(categoryName);
+          }}
+        >
+          <Tile img={img} name={categoryName} />
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default Tiles;

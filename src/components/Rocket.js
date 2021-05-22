@@ -24,7 +24,6 @@ const Rocket = () => {
                 .to(rightCloudRef.current, {duration: .2, autoAlpha: 1, scale: 1})
                 .to(leftCloudRef.current, {duration: .2, autoAlpha: 1, scale: 1}, "-=.2")
         }
-
     }, [rocketState])
 
     return (

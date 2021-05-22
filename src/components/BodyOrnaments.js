@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const BodyOrnaments = () => {
   return (
@@ -13,7 +13,7 @@ const BodyOrnaments = () => {
         <div className="body__ornament-inner"></div>
       </div>
     </React.Fragment>
-  );
+  )
 };
 
 export default BodyOrnaments;
