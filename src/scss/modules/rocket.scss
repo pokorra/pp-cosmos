@@ -20,4 +20,8 @@
     border: none;
     border-radius: 8px;
     letter-spacing: .5px;
+    cursor: pointer;
+    &:hover {
+        background-color: #05C9B7;
+    }
 }
