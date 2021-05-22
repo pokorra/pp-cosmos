@@ -30,8 +30,10 @@ function App() {
   return (
     <div className="body">
       <BodyOrnaments />
-      <SpaceX setCategory={setCategory} />
-      <Rocket />
+      <section className="body__inner-elements">
+        <SpaceX setCategory={setCategory} />
+        <Rocket />
+      </section>
       <Modal setCategory={setCategory} category={category} data={data} setData={setData} loading={loading} />
     </div>
   );

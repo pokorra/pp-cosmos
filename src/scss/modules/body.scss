@@ -3,11 +3,14 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+    @include centerflex;  
+}
+.body__inner-elements {
+    width: 945px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
-
 .body__ornament {
     position: absolute;
     width: 346.5px;

@@ -28,7 +28,7 @@ const Modal = ({ setCategory, category, data, setData, loading}) => {
                 <button className="modal__cta" onClick={closeModal}></button>
             </div>
             <table className="modal__table table">
-                <thead className="table__headrow">
+                <thead className="table__first-row">
                 <tr className="table__row">
                     <th className="table__half table__half--sort"> 
                         <p>{columnOne} </p> 
@@ -44,6 +44,7 @@ const Modal = ({ setCategory, category, data, setData, loading}) => {
                             <td className="table__half"> {el[columnTwo]}  </td> 
                         </tr>
                     ))}
+                    <tr className="table__last-row"></tr>
                 </tbody>
             </table>
             </React.Fragment>

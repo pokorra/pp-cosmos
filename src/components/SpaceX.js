@@ -7,15 +7,13 @@ const SpaceX = ( {setCategory }) => {
    
     const changeCategory = newCategory => { setCategory(newCategory) }
 
-    return (
-        <div className="spacex">
+    return (       
             <ul className="tile__container">
                 {DATA_TILES.map( ({img, name, valueI, valueII}) => 
                 <li className="tile__single" key={name} onClick={()=> {changeCategory( name) }}> 
                     <Tile img={img} name={name}/>
                 </li>)}
             </ul>
-        </div>
     )
 };
 
